@@ -46,7 +46,7 @@ const projects = [
         \u2022 Utilized local storage for persistent item storage, providing users with a seamless experience across visits. 
         \u2022 The app remembers user activity even after days, offering a personalized and user-friendly shopping experience.
     `,
-    url: ``,
+    url: `https://github.com/burak-inan/ContextAPI-add-to-cart`,
     imageSrc: "/assets/images/context-api-shopping.webp",
   },
 ];
