@@ -10,7 +10,7 @@ export const AlertProvider = ({ children }) => {
     // Message to be displayed, can be any string
     message: '',
   });
-
+ 
   return (
     <AlertContext.Provider
       value={{

@@ -13,19 +13,21 @@ const projects = [
         \u2022 Provides a single page website thanks to react-router-dom to manage books, movies, members, and borrowing transactions in a library.
         \u2022 Deployed with Docker
       `,
-    url: `https://github.com/burak-inan/Private-Projects/tree/main/Online%20Library`,  
+    liveDemoUrl: `https://rwuonlinelibrary.vercel.app/`, 
+    githubUrl: `https://github.com/burak-inan/Private-Projects/tree/main/Online%20Library`,     
     imageSrc: "/assets/images/rwu-online-library.webp",
   },
   {
-    title: "IT Pro Campus",
+    title: "Student Management System",
     description: `
-        \u2022  IT Pro Campus is a fullstack student management system project. 
+        \u2022  Student Management System is a fullstack student management system project. 
         \u2022  It aims to provide a user-friendly interface for managing various entities within an educational institution.
         \u2022  The ReactJS frontend seamlessly integrates with the Spring Boot backend, providing administrators, teachers, and students with a comprehensive set of features for the Student Management System.
         \u2022  Deployed with Docker.
     `,
-    url: `https://github.com/burak-inan/Private-Projects/tree/main/Student%20Management%20System`,
-    imageSrc: "/assets/images/it-pro-campus.webp",
+    liveDemoUrl: `https://managementonschools.com/`, 
+    githubUrl: `https://github.com/burak-inan/Private-Projects/tree/main/Student%20Management%20System`,
+    imageSrc: "/assets/images/student-management-system.webp",
   },
   {
     title: "Reactive Programming",
@@ -35,7 +37,7 @@ const projects = [
         \u2022  Implemented manual creation of database schemas due to limitations in automatic schema generation for reactive databases.
         \u2022  Established endpoints using both bean-based routing and traditional methods, providing flexibility in API design.
     `,
-    url: `https://github.com/burak-inan/reactive-programming/tree/main`,
+    githubUrl: `https://github.com/burak-inan/reactive-programming/tree/main`,
     imageSrc: "/assets/images/reactive-programming.webp",
   },
   {
@@ -46,7 +48,8 @@ const projects = [
         \u2022 Utilized local storage for persistent item storage, providing users with a seamless experience across visits. 
         \u2022 The app remembers user activity even after days, offering a personalized and user-friendly shopping experience.
     `,
-    url: `https://github.com/burak-inan/ContextAPI-add-to-cart`,
+    liveDemoUrl: `https://add-to-cart-jade.vercel.app/main`, 
+    githubUrl: `https://github.com/burak-inan/ContextAPI-add-to-cart`,
     imageSrc: "/assets/images/context-api-shopping.webp",
   },
 ];
@@ -73,7 +76,8 @@ const ProjectsSection = () => {
             key={project.title}
             title={project.title}
             description={project.description}
-            url={project.url}
+            githubUrl={project.githubUrl}
+            liveDemoUrl={project.liveDemoUrl}
             imageSrc={project.imageSrc}
           />
         ))}
