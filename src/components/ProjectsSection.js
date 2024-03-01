@@ -7,14 +7,14 @@ const projects = [
   {
     title: "Pepolon",
     description:`
-    \u2022 Pepolon is a Job application platform. 
-    \u2022 Developed with NextJs and Spring Boot
-    \u2022 It has responsible, beatifull design
-    \u2022 Provides a single page website.
-    \u2022 Integrated with cloud and mail services.
-    \u2022 Allows the files of the users to be stored in the cloud.
-    \u2022 Deployed with Docker and Kubernetes
-    \u2022 Automated with CI/CD
+      \u2022 Pepolon is a Job application platform. 
+      \u2022 Developed with NextJs and Spring Boot
+      \u2022 It has responsible, beatifull design
+      \u2022 Provides a single page website.
+      \u2022 Integrated with cloud and mail services.
+      \u2022 Allows the files of the users to be stored in the cloud.
+      \u2022 Deployed with Docker and Kubernetes
+      \u2022 Automated with CI/CD
     `,
     liveDemoUrl: `https://pepolon.com`, 
     githubUrl: `https://github.com/burak-inan/Private-Projects/tree/main/Pepolon`,

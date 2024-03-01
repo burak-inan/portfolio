@@ -9,7 +9,7 @@ const Card = ({ title, description, imageSrc, githubUrl, liveDemoUrl }) => {
   return (
     <VStack color="black" backgroundColor="white" borderRadius="xl">
       <Image borderRadius="xl" src={imageSrc} alt={title} w="full" />
-      <VStack spacing={4} p={4} alignItems="flex-start" flex="1">
+      <VStack spacing={4} p={4} alignItems="flex-start" flex="1" w="full">
         <HStack justifyContent="space-between" alignItems="center">
           <Heading as="h3" size="md">
             {title}
