@@ -5,6 +5,22 @@ import Card from "./Card";
 
 const projects = [
   {
+    title: "Pepolon",
+    description:`
+    \u2022 Pepolon is a Job application platform. 
+    \u2022 Developed with NextJs and Spring Boot
+    \u2022 It has responsible, beatifull design
+    \u2022 Provides a single page website.
+    \u2022 Integrated with cloud and mail services.
+    \u2022 Allows the files of the users to be stored in the cloud.
+    \u2022 Deployed with Docker and Kubernetes
+    \u2022 Automated with CI/CD
+    `,
+    liveDemoUrl: `https://pepolon.com`, 
+    githubUrl: `https://github.com/burak-inan/Private-Projects/tree/main/Pepolon`,
+    imageSrc: "/assets/images/pepolon.webp",
+  },
+  {
     title: "RWU Online Library",
     description: `
         \u2022 The Online Library System is a fullstack application
@@ -40,21 +56,9 @@ const projects = [
     githubUrl: `https://github.com/burak-inan/reactive-programming/tree/main`,
     imageSrc: "/assets/images/reactive-programming.webp",
   },
-  {
-    title: "ContextAPI Shopping",
-    description:`
-        \u2022 Created a responsive single-page shopping app with ReactJS. 
-        \u2022 Implemented a central context for efficient state management, enabling users to add items to their cart and navigate it effortlessly. 
-        \u2022 Utilized local storage for persistent item storage, providing users with a seamless experience across visits. 
-        \u2022 The app remembers user activity even after days, offering a personalized and user-friendly shopping experience.
-    `,
-    liveDemoUrl: `https://add-to-cart-jade.vercel.app/main`, 
-    githubUrl: `https://github.com/burak-inan/ContextAPI-add-to-cart`,
-    imageSrc: "/assets/images/context-api-shopping.webp",
-  },
 ];
 
-const ProjectsSection = () => {
+const ProjectsSection = ({minWidth}) => {
   return (
     <FullScreenSection
       backgroundColor="#14532d"
@@ -62,6 +66,7 @@ const ProjectsSection = () => {
       p={8}
       alignItems="flex-start"
       spacing={8}
+      minWidth={minWidth}
     >
       <Heading as="h1" id="projects-section">
         Featured Projects

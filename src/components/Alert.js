@@ -17,8 +17,6 @@ function Alert() {
   const { isOpen, type, message, onClose } = useAlertContext();
   const cancelRef = useRef();
   const isSuccess = type === "success"
-  const customMessage= "This is not a real contact form. Reach me out here";
-  const email= "burakinan.dev@gmail.com"
 
   return (
     <AlertDialog
@@ -33,8 +31,6 @@ function Alert() {
           </AlertDialogHeader>
           <AlertDialogBody fontWeight="bold">
             <Text marginBottom="2rem">{message}</Text>
-            <Text color="darkBlue">{customMessage}</Text>
-            <Text color="darkRed">{email}</Text>
           </AlertDialogBody>
         </AlertDialogContent>
       </AlertDialogOverlay>

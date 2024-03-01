@@ -1,4 +1,5 @@
 import {useState} from "react";
+import emailjs from "@emailjs/browser"
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -9,20 +10,21 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const useSubmit = () => { 
   const [isLoading, setLoading] = useState(false); 
   const [response, setResponse] = useState(null); 
+  const serviceID= process.env.REACT_APP_SERVICE_ID
+  const templateID= process.env.REACT_APP_TEMPLATE_ID
+  const publicKey= process.env.REACT_APP_PUBLIC_KEY
   
-  const submit = async (url, data) => { 
-    const random = Math.random(); 
+  const submit = async (data, form) => { 
+    
     setLoading(true); 
     try { 
-      await wait(2000); 
-      if (random < 0.5) { 
-        throw new Error("Something went wrong"); 
-      } 
+      const res= await emailjs.sendForm(serviceID, templateID, form, publicKey) 
       setResponse({ 
         type: 'success', 
-        message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`, 
+        message: `Thanks for your submission ${data.user_name}, I will get back to you shortly!`, 
       }) 
     } catch (error) { 
+      console.log(error)
       setResponse({ 
         type: 'error', 
         message: 'Something went wrong, please try again later!', 

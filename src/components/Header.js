@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -32,7 +32,9 @@ const socials = [
   },
 ];
 
-const Header = () => {
+const Header = (props) => {
+  const [width, setWidth]= useState();
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -45,8 +47,11 @@ const Header = () => {
   };
 
   const headerRef = useRef(null);
-
+  
   useEffect(() => {
+    // to pass width to parent
+    props.getWidth(headerRef.current.clientWidth)
+
     let prevScrollPos = window.scrollY;
 
     const handleScroll = () => {
@@ -81,6 +86,7 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
       ref={headerRef}
+      id="header"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
